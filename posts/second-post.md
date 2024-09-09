@@ -8,7 +8,7 @@ Static Generation is one of the most powerful features of Next.js. It allows you
 
 # Mastering Next.js: A Comprehensive Guide
 
-![Next.js Logo](/images/nextjs-logo.png)
+![Next.js Logo](/next.svg)
 
 Next.js is a React framework that provides a robust solution for building fast, SEO-friendly web applications. In this guide, we will dive deep into the key features of Next.js, exploring everything from initial setup to advanced techniques.
 
