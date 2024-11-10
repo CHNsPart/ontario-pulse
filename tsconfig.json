@@ -18,7 +18,11 @@
       }
     ],
     "paths": {
+<<<<<<< HEAD
       "@/*": ["./src/*"]
+=======
+      "@/*": ["./*"]
+>>>>>>> 9235d79 (rebase with the org)
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
