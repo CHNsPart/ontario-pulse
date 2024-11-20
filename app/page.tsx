@@ -1,22 +1,46 @@
-import Link from "next/link";
-import { type PostData, getSortedPostsData } from "./lib/posts"; // Ensure the correct path
+import { type PostData, getSortedPostsData } from "./lib/posts";
+import { BlogCard } from "./components/ui/BlogCard";
+import Sidebar from "./components/wrappers/Sidebar";
 
-export default function Home() {
-	const allPostsData: PostData[] = getSortedPostsData();
-	console.log(allPostsData);
+export default async function Home() {
+  console.log('Starting Home page render');
+  let allPostsData: PostData[] = [];
+  
+  try {
+    allPostsData = await getSortedPostsData();
+    console.log('Posts received:', allPostsData);
+  } catch (error) {
+    console.error('Error fetching posts:', error);
+  }
 
-	return (
-		<section className="w-full h-screen flex flex-col justify-start p-5">
-			<h1 className="text-4xl font-bold py-5">Ontario Pulse</h1>
-			<ul className="border w-full">
-				{allPostsData.map(({ id, date, title }) => (
-					<li className="border" key={id}>
-						<Link href={`/posts/${id}`}>{title}</Link>
-						<br />
-						<small>{date}</small>
-					</li>
-				))}
-			</ul>
-		</section>
-	);
+  return (
+    <div className="container mx-auto px-4 py-8">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        {/* Main Content */}
+        <div className="lg:col-span-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {Array.isArray(allPostsData) ? (
+              allPostsData.map(post => (
+                <BlogCard
+                  key={post.id}
+                  title={post.title}
+                  date={post.date}
+                  image={post.ogImage || '/images/default-blog.jpg'}
+                  slug={post.id}
+                  preview={post.description}
+                />
+              ))
+            ) : (
+              <div>No posts available</div>
+            )}
+          </div>
+        </div>
+
+        {/* Sidebar */}
+        <div className="lg:col-span-4">
+          <Sidebar />
+        </div>
+      </div>
+    </div>
+  );
 }
