@@ -11,6 +11,13 @@ interface BlogCardProps {
 }
 
 export const BlogCard = ({ title, date, image, slug, preview }: BlogCardProps) => {
+  const formatDate = (dateString: string) => {
+    return new Date(dateString).toLocaleDateString('en-US', {
+      day: 'numeric',
+      month: 'short',
+      year: 'numeric'
+    }).replace(',', '');
+  };
   return (
     <Link href={`/posts/${slug}`} className="group block">
       <div className="rounded-lg overflow-hidden bg-white h-full shadow-sm hover:shadow-md transition-shadow">
@@ -30,7 +37,7 @@ export const BlogCard = ({ title, date, image, slug, preview }: BlogCardProps) =
           
           <div className="flex items-center mt-3 text-sm text-red-500">
             <Calendar className="h-4 w-4 mr-2" />
-            {date}
+            {formatDate(date)}
           </div>
           
           {preview && (

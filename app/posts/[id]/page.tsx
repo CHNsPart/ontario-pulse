@@ -49,6 +49,14 @@ export default async function Post({ params }: { params: { id: string } }) {
     if (!postData) {
       notFound();
     }
+    
+    const formatDate = (dateString: string) => {
+      return new Date(dateString).toLocaleDateString('en-US', {
+        day: 'numeric',
+        month: 'short',
+        year: 'numeric'
+      }).replace(',', '');
+    };
 
     return (
       <div className="container mx-auto px-4 py-8">
@@ -75,7 +83,7 @@ export default async function Post({ params }: { params: { id: string } }) {
               <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center text-red-500">
                   <Calendar className="h-4 w-4 mr-2" />
-                  <time>{postData.date}</time>
+                  <time>{formatDate(postData.date)}</time>
                 </div>
                 <ShareButtons url={`/posts/${postData.id}`} />
               </div>

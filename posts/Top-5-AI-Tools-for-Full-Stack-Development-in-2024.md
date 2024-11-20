@@ -2,7 +2,7 @@
 title: "Top 5 AI Tools for Creating Full Stack Applications in 2024"
 date: "2024-11-19"
 description: "Discover the most powerful AI tools revolutionizing full stack development. Learn how to build robust applications faster and smarter with AI-powered development tools."
-ogImage: "/images/ai-fullstack-tools.jpg"
+ogImage: "/images/top-ai/ai-fullstack-tools.jpg"
 categories: ["Technology", "Programming"]
 topics: ["AI Tools", "Full Stack Development", "Web Development"]
 ---
@@ -24,7 +24,7 @@ Before diving into our top picks, let's understand why AI tools are becoming ind
 
 ### 1. GitHub Copilot
 
-![GitHub Copilot Interface](/images/github-copilot.jpg)
+![GitHub Copilot Interface](/images/top-ai/github-copilot.jpg)
 *Image source: https://github.com/features/copilot*
 
 **Key Features:**
@@ -37,7 +37,7 @@ GitHub Copilot has revolutionized how developers write code, offering intelligen
 
 ### 2. Amazon CodeWhisperer
 
-![Amazon CodeWhisperer](/images/codewhisperer.png)
+![Amazon CodeWhisperer](/images/top-ai/codewhisperer.png)
 *Image source: https://aws.amazon.com/blogs/machine-learning/introducing-amazon-codewhisperer-the-ml-powered-coding-companion*
 
 **Key Features:**
@@ -50,7 +50,7 @@ CodeWhisperer excels in cloud-native development, making it perfect for building
 
 ### 3. Tabnine
 
-![Tabnine AI Assistant](/images/tabnine.webp)
+![Tabnine AI Assistant](/images/top-ai/tabnine.webp)
 *Image source: https://medium.com/aimonks/lunarvim-tabnine-ai-coding-assistant-bdd2eba5dd44*
 
 **Key Features:**
@@ -63,7 +63,7 @@ Tabnine's unique selling point is its ability to learn from your team's coding p
 
 ### 4. Microsoft Power Apps
 
-![Power Apps Interface](/images/power-apps.png)
+![Power Apps Interface](/images/top-ai/power-apps.png)
 *Image source: https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/intro-maker-portal*
 
 **Key Features:**
@@ -76,7 +76,7 @@ Power Apps combines AI capabilities with low-code development, making it perfect
 
 ### 5. IBM Watson Assistant for Developers
 
-![IBM Watson Assistant](/images/watson-assistant.png)
+![IBM Watson Assistant](/images/top-ai/watson-assistant.png)
 *Image source: https://www.linkedin.com/pulse/ibm-watson-create-assistant-service-instance-sanjay-kumar-pathak/*
 
 **Key Features:**
