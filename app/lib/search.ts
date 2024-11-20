@@ -38,7 +38,6 @@ export async function searchPosts(query: string, filters?: {
     }
   }
 
-  // If no search query, return filtered posts
   if (!query) return filteredPosts;
 
   // Apply fuzzy search
