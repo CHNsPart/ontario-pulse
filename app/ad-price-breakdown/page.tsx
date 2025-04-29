@@ -346,7 +346,7 @@ const AdPriceBreakdownPage = () => {
                 </div>
               </div>
               <blockquote className="text-gray-600 italic">
-                "Our campaign with Ontario Pulse exceeded expectations. The team was responsive and the detailed reporting helped us understand our ROI. We saw a 28% increase in qualified leads from the Toronto area."
+                {'"Our campaign with Ontario Pulse exceeded expectations. The team was responsive and the detailed reporting helped us understand our ROI. We saw a 28% increase in qualified leads from the Toronto area."'}
               </blockquote>
             </div>
             
@@ -363,7 +363,7 @@ const AdPriceBreakdownPage = () => {
                 </div>
               </div>
               <blockquote className="text-gray-600 italic">
-                "As a small business, we were cautious about ad spending. Ontario Pulse delivered excellent value with their targeted audience. Our sidebar ads brought in new customers who specifically mentioned seeing us on the site."
+                {'"As a small business, we were cautious about ad spending. Ontario Pulse delivered excellent value with their targeted audience. Our sidebar ads brought in new customers who specifically mentioned seeing us on the site."'}
               </blockquote>
             </div>
           </div>

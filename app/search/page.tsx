@@ -56,6 +56,7 @@ export default function SearchPage() {
     if (query || category || topic || date) {
       performSearch(query, { category, topic, date });
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchParams]);
 
   return (
