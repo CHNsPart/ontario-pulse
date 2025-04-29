@@ -1,6 +1,7 @@
 import { type PostData, getSortedPostsData } from "./lib/posts";
 import { BlogCard } from "./components/ui/BlogCard";
 import Sidebar from "./components/wrappers/Sidebar";
+import HomeAdBannerSlider from "./components/ads/HomeAdBannerSlider";
 
 export default async function Home() {
   console.log('Starting Home page render');
@@ -18,6 +19,7 @@ export default async function Home() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
         {/* Main Content */}
         <div className="lg:col-span-8">
+      <HomeAdBannerSlider />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {Array.isArray(allPostsData) ? (
               allPostsData.map(post => (

@@ -1,0 +1,13 @@
+# robots.txt for ontariopulse.com
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://ontariopulse.com/sitemap.xml
+
+# Search-specific paths
+Disallow: /api/
+Disallow: /_next/
+
+# Privacy-specific paths
+Disallow: /admin/

@@ -4,6 +4,7 @@ import { getSortedPostsData } from '@/app/lib/posts';
 import { Tag } from '@/app/components/ui/Tag';
 import type { PostData } from '@/app/lib/posts';
 import { Calendar } from 'lucide-react';
+import BlogPostAdUnit from '../ads/BlogPostAdUnit';
 
 interface SidebarProps {
   currentPostId?: string;  // Optional: to exclude current post from recommendations
@@ -90,7 +91,7 @@ const Sidebar = async ({ currentPostId }: SidebarProps = {}) => {
       </div>
 
       {/* Recommended Posts Section */}
-      <div>
+      <div className='space-y-6'>
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-xl font-semibold">Recommended</h2>
         </div>
@@ -124,6 +125,7 @@ const Sidebar = async ({ currentPostId }: SidebarProps = {}) => {
             </Link>
           ))}
         </div>
+        <BlogPostAdUnit size="square" position="sidebar" />
       </div>
     </div>
   );

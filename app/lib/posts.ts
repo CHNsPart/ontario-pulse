@@ -15,6 +15,7 @@ export interface PostData {
   description: string;
   ogImage: string;
   contentHtml: string;
+  keywords?: string[];
   categories: string[];
   topics: string[];
 }
@@ -89,7 +90,12 @@ export async function getTopicsByCategory(category: string): Promise<string[]> {
 
 export async function getPostsByCategory(category: string): Promise<PostData[]> {
   const posts = await getSortedPostsData();
-  return posts.filter(post => post.categories?.includes(category));
+  
+  return posts.filter(post => 
+    post.categories.some(cat => 
+      cat.toLowerCase() === category.toLowerCase()
+    )
+  );
 }
 
 export async function getPostsByTopic(topic: string): Promise<PostData[]> {
